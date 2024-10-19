@@ -11,4 +11,9 @@
     <PackageReference Include="Centeva.DomainModeling" Version="10.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
