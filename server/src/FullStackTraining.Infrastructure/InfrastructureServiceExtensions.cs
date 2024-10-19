@@ -10,7 +10,7 @@ public static class InfrastructureServiceExtensions
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        string connectionString = Guard.Against.NullOrWhiteSpace(configuration.GetConnectionString("Default"));
+        var connectionString = Guard.Against.NullOrWhiteSpace(configuration.GetConnectionString("Default"));
 
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString)
@@ -18,7 +18,6 @@ public static class InfrastructureServiceExtensions
 
         services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
         services.AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
-        services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
         return services;
     }
