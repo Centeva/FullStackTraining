@@ -14,12 +14,20 @@ public class ProjectsController : ApiControllerBase
     }
 
     [HttpGet("")]
-    public async Task<IActionResult> GetProjects()
+    public async Task<IActionResult> List()
     {
         var projects = await _projectRepository.ListAsync();
 
         var response = projects.Select(x => new ProjectDto(x.Id, x.Name, x.Description));
 
         return Ok(response);
+    }
+
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> Get(Guid id)
+    {
+        // TODO: Retrieve a single project
+
+        return Ok();
     }
 }

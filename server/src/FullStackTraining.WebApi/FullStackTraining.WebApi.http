@@ -1,5 +1,12 @@
 @FullStackTraining.WebApi_HostAddress = https://localhost:7001
 
+# Sample Project ID that should exist if you ran the Seeder
+@Seed.ProjectId = f9bb9f41-1706-4930-893a-94cc1d226dc0
+
 GET {{FullStackTraining.WebApi_HostAddress}}/api/projects
+
+###
+
+GET {{FullStackTraining.WebApi_HostAddress}}/api/projects/{{Seed.ProjectId}}
 
 ###
