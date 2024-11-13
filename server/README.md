@@ -9,7 +9,7 @@ for some programming tasks to complete.
 ## Technologies
 
 - [ASP.NET
-  Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0)
+  Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-9.0)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) -
   persistence of application data.  This code uses SQLite as the data store to
   avoid the need for running extra services.
