@@ -1,6 +1,5 @@
-@FullStackTraining.WebApi_HostAddress = http://localhost:5201
+@FullStackTraining.WebApi_HostAddress = https://localhost:7001
 
-GET {{FullStackTraining.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{FullStackTraining.WebApi_HostAddress}}/api/projects
 
 ###

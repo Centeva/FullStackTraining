@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FullStackTraining.WebApi.Controllers;
+namespace FullStackTraining.WebApi;
 
 [ApiController]
 [Route("api/[controller]")]

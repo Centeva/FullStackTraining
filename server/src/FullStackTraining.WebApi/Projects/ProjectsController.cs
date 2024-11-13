@@ -1,9 +1,8 @@
 ﻿using Centeva.DomainModeling;
 using FullStackTraining.Core.ProjectAggregate;
-using FullStackTraining.WebApi.ApiModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FullStackTraining.WebApi.Controllers;
+namespace FullStackTraining.WebApi.Projects;
 
 public class ProjectsController : ApiControllerBase
 {
@@ -14,12 +13,13 @@ public class ProjectsController : ApiControllerBase
         _projectRepository = projectRepository;
     }
 
-    [HttpGet("", Name = nameof(GetProjects))]
+    [HttpGet("")]
     public async Task<IActionResult> GetProjects()
     {
-        var projects = (await _projectRepository.ListAsync())
-            .Select(x => new ProjectModel(x.Id, x.Name, x.Description));
+        var projects = await _projectRepository.ListAsync();
 
-        return Ok(projects);
+        var response = projects.Select(x => new ProjectDto(x.Id, x.Name, x.Description));
+
+        return Ok(response);
     }
 }
