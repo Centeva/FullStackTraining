@@ -23,6 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullStackTraining.WebApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackTraining.Seeder", "src\FullStackTraining.Seeder\FullStackTraining.Seeder.csproj", "{ACD77DFA-A156-40DB-919A-055688E616B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B41F74E-9AA5-4BA1-8326-979DBB6B7F68}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,5 +79,8 @@ Global
 		{6ADC9E4B-95AB-44AA-9C74-15BA4D8A0850} = {285887F1-61A5-47B5-80E0-667503110FFB}
 		{5D0FD64A-D538-41E5-9308-AE973D6EFD51} = {285887F1-61A5-47B5-80E0-667503110FFB}
 		{ACD77DFA-A156-40DB-919A-055688E616B6} = {285887F1-61A5-47B5-80E0-667503110FFB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92A26104-80F5-4520-B604-0F8215CEABA5}
 	EndGlobalSection
 EndGlobal
