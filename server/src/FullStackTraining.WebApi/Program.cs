@@ -11,7 +11,7 @@ builder.Services
 // MediatR
 builder.Services
     .AddMediatR(configuration => configuration.RegisterServicesFromAssemblyContaining<Project>())
-    .AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
+    .AddSingleton<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
 // Web stuff
 builder.Services.AddRouting(options =>
