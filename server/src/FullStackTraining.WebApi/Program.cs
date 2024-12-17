@@ -1,6 +1,7 @@
 using Centeva.DomainModeling;
 using FullStackTraining.Core.ProjectAggregate;
 using FullStackTraining.Infrastructure;
+using FullStackTraining.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,15 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+// Create database if it doesn't exist (will not run migrations to bring existing DB up to date)
+if (app.Environment.IsDevelopment())
+{
+    await using var serviceScope = app.Services.CreateAsyncScope();
+    await using var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    await dbContext.Database.EnsureCreatedAsync();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
