@@ -19,7 +19,7 @@ public class ProjectDependencies
             .HaveDependencyOnAny("FullStackTraining.Infrastructure", "FullStackTraining.Application")
             .GetResult();
 
-        result.IsSuccessful.Should().BeTrue();
+        result.IsSuccessful.ShouldBeTrue();
     }
 
     [Fact]
@@ -31,7 +31,7 @@ public class ProjectDependencies
             .HaveDependencyOn("FullStackTraining.Infrastructure")
             .GetResult();
 
-        result.IsSuccessful.Should().BeTrue();
+        result.IsSuccessful.ShouldBeTrue();
     }
 
     [Fact]
@@ -43,7 +43,7 @@ public class ProjectDependencies
             .HaveDependencyOn("FullStackTraining.Application")
             .GetResult();
 
-        result.IsSuccessful.Should().BeTrue();
+        result.IsSuccessful.ShouldBeTrue();
     }
 
     [Fact]
@@ -55,6 +55,6 @@ public class ProjectDependencies
             .HaveDependencyOnAll("FullStackTraining.Application", "FullStackTraining.Infrastructure")
             .GetResult();
 
-        result.IsSuccessful.Should().BeTrue();
+        result.IsSuccessful.ShouldBeTrue();
     }
 }
