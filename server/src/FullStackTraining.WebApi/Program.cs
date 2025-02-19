@@ -50,3 +50,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// Make the implicit Program.cs class public, so integration/functional tests can reference the correct assembly for host building
+public partial class Program { }

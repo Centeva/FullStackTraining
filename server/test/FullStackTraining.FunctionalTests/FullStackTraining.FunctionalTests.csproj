@@ -22,6 +22,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\FullStackTraining.Infrastructure\FullStackTraining.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\FullStackTraining.WebApi\FullStackTraining.WebApi.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Using Include="Xunit" />
     <Using Include="Shouldly" />
   </ItemGroup>
