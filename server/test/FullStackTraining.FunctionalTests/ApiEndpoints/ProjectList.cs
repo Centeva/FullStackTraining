@@ -12,8 +12,9 @@ namespace FullStackTraining.FunctionalTests.ApiEndpoints
         {
             var result = await _client.GetAndDeserializeAsync<List<ProjectDto>>("/api/projects");
 
-            result.Count.ShouldBe(1);
+            result.Count.ShouldBe(2);
             result.ShouldContain(p => p.Id == SeedData.Project1.Id);
+            result.ShouldContain(p => p.Id == SeedData.Project2.Id);
         }
     }
 }
